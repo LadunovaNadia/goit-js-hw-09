@@ -1,0 +1,44 @@
+body {
+	text-align: center;
+}
+
+.title {
+	margin-top: 20px;
+	font-size: 24px;
+	color: #333;
+}
+
+#datetime-picker {
+	font-size: 16px;
+	padding: 10px;
+	margin-top: 10px;
+}
+
+.button {
+	background-color: #a0c6f0;
+	color: #fff;
+	padding: 10px 20px;
+	font-size: 16px;
+	border: none;
+	cursor: pointer;
+	border-radius: 50%;
+}
+
+.timer {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	margin-top: 20px;
+	gap: 30px;
+}
+
+.numbers {
+	font-size: 36px;
+	font-weight: bold;
+	color: #333;
+}
+
+.label {
+	font-size: 16px;
+	color: #777;
+}
