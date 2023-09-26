@@ -15,7 +15,7 @@ onClose(selectedDates, dateStr, instance) {
    }
 
    if (selectedDate <= new Date()) {
-      Notiflix.Notify.failure("Please choose a date in the future");
+      alert("Please choose a date in the future");
       instance.clear();
       return;
    }
@@ -28,6 +28,7 @@ onClose(selectedDates, dateStr, instance) {
 const picker = flatpickr("#datetime-picker", options);
 
 const startButton = document.querySelector("[data-start]");
+const datetimePicker = document.querySelector("#datetime-picker");
 let countdownInterval;
 
 startButton.addEventListener("click", () => {
@@ -35,6 +36,7 @@ const selectedDate = picker.selectedDates[0];
 
 if (selectedDate) {
    startButton.disabled = true;
+      datetimePicker.disabled = true;
 
    countdownInterval = setInterval(() => {
       const currentDate = new Date();
@@ -42,7 +44,8 @@ if (selectedDate) {
 
       if (timeRemaining <= 0) {
       clearInterval(countdownInterval);
-      updateTimerUI({ days: 0, hours: 0, minutes: 0, seconds: 0 });
+         updateTimerUI({ days: 0, hours: 0, minutes: 0, seconds: 0 });
+         datetimePicker.disabled = false;
       return;
       }
 
